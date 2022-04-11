@@ -1,4 +1,4 @@
-FROM bcgovimages/von-image
+FROM bcgovimages/von-image:py36-1.16-1
 
 USER indy
 
