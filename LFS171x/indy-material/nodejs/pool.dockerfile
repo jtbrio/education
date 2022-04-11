@@ -9,12 +9,12 @@ RUN pip install --no-cache-dir aiosqlite
 
 ENV RUST_LOG ${RUST_LOG:-warning}
 
-RUN sudo mkdir -p \
+RUN mkdir -p \
         $HOME/ledger/sandbox/data \
         $HOME/log \
         $HOME/.indy-cli/networks \
         $HOME/.indy_client/wallet && \
-    sudo chmod -R ug+rw $HOME/log $HOME/ledger $HOME/.indy-cli $HOME/.indy_client
+    chmod -R a+rw $HOME/log $HOME/ledger $HOME/.indy-cli $HOME/.indy_client
 
 ADD --chown=indy:indy indy_config.py /etc/indy/
 
