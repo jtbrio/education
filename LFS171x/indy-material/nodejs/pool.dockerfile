@@ -1,10 +1,11 @@
-FROM bcgovimages/von-image:py35-1.6-8
+FROM bcgovimages/von-image
 
 USER indy
 
 RUN pip install --upgrade pip
 
 RUN pip install --no-cache-dir aiosqlite
+#RUN pip install aiosqlite
 
 ENV RUST_LOG ${RUST_LOG:-warning}
 
