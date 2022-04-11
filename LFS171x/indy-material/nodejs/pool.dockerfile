@@ -13,9 +13,10 @@ RUN mkdir -p \
         $HOME/ledger/sandbox/data \
         $HOME/log \
         $HOME/.indy-cli/networks \
-        $HOME/.indy_client/wallet && \
-        chown -R indy $HOME && \
-    chmod -R ug+rw $HOME/log $HOME/ledger $HOME/.indy-cli $HOME/.indy_client
+        $HOME/.indy_client/wallet 
+        #&& \
+        #chown -R indy $HOME && \
+    #chmod -R ug+rw $HOME/log $HOME/ledger $HOME/.indy-cli $HOME/.indy_client
 
 ADD --chown=indy:indy indy_config.py /etc/indy/
 
