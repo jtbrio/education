@@ -22,4 +22,4 @@ ADD --chown=indy:indy indy_config.py /etc/indy/
 
 ADD --chown=indy:indy . $HOME
 
-RUN sudo chmod uga+x scripts/* bin/*
+RUN chmod uga+x scripts/* bin/*
